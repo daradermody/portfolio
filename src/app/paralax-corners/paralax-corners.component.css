@@ -1,0 +1,44 @@
+.wall {
+  height: 500px;
+  position: relative;
+  padding: 200px 0;
+  z-index: -1;
+}
+
+.wall-face {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: white
+}
+
+.front {
+  width: 40%;
+  background-color: blueviolet;
+  left: 0;
+  font-size: 200px;
+}
+
+.side {
+  transform-origin: left;
+  transform: rotateY(90deg);
+  left: 40%;
+  width: 10px;
+  background-color: black;
+}
+
+.back {
+  background-color: yellowgreen;
+  left: 40%;
+  transform: translateZ(-10px);
+  width: 110%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.back > p {
+  margin: 1em 2em;
+}
