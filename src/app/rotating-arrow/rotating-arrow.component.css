@@ -1,0 +1,59 @@
+.rotating-arrow {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.tail, .stem {
+  width: 25vw;
+  height: 60vh;
+  background-color: black;
+  color: white;
+}
+
+
+.head {
+  width: 0;
+  height: 0;
+  border-top: 40vh solid black;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+}
+
+.tail-text, .stem-text {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+.tail-text {
+  top: 15vh;
+}
+
+.stem-text {
+  top: 75vh;
+}
+
+@media screen and (max-width: 700px) {
+  .tail, .stem {
+    width: 70vw;
+  }
+
+  .tail-text, .stem-text {
+    width: 60vw;
+  }
+
+  .tail-text {
+    top: 10vh;
+  }
+
+  .stem-text {
+    top: 70vh;
+  }
+}

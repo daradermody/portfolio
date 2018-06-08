@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ParalaxCornersComponent } from './paralax-corners/paralax-corners.component';
 import { AppRoutingModule } from './app.routing';
 import { FooterComponent } from './footer/footer.component';
+import { RotatingArrowComponent } from './rotating-arrow/rotating-arrow.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ParalaxCornersComponent,
-    FooterComponent
+    FooterComponent,
+    RotatingArrowComponent
   ],
   imports: [
     BrowserModule,

@@ -13,3 +13,11 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
+
+
+.temp-section-divider {
+  background-color: yellow;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
