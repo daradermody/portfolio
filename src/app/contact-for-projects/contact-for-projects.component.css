@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+.contact-for-projects {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+span {
+  font-size: 2em;
+  margin: 50px;
+}
+
+a {
+  background-color: transparent;
+  border: 2px solid #a0a6c0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-family: 'Playfair Display', Georgia, serif;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: inherit;
+}

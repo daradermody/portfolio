@@ -1,6 +1,5 @@
 .footer {
-  height: 600px;
-  margin-top: 500px;
+  height: 60vh;
 }
 
 .center-content {
@@ -13,6 +12,7 @@
 .footer-text {
   text-align: center;
   margin-top: 200px;
+  z-index: 1;
 }
 
 .footer-text img {
@@ -29,6 +29,7 @@
 .layer-1 {
   width: 100%;
   background-image: url(/assets/img/mountains-1.svg);
+  z-index: 0;
 }
 
 .layer-2 {

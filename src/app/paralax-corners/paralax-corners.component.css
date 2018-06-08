@@ -19,7 +19,7 @@
   width: 40%;
   background-color: blueviolet;
   left: 0;
-  font-size: 200px;
+  font-size: 20vw;
 }
 
 .side {
@@ -41,4 +41,10 @@
 
 .back > p {
   margin: 1em 2em;
+}
+
+@media screen and (max-width: 700px) {
+  .back {
+    font-size: 2em;
+  }
 }

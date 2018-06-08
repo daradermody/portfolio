@@ -9,7 +9,7 @@
 
 .tail, .stem {
   width: 25vw;
-  height: 60vh;
+  height: 70vh;
   background-color: black;
   color: white;
 }
@@ -33,27 +33,19 @@
 }
 
 .tail-text {
-  top: 15vh;
+  top: 20vh;
 }
 
 .stem-text {
-  top: 75vh;
+  top: 90vh;
 }
 
 @media screen and (max-width: 700px) {
   .tail, .stem {
-    width: 70vw;
-  }
-
-  .tail-text, .stem-text {
     width: 60vw;
   }
 
-  .tail-text {
-    top: 10vh;
-  }
-
-  .stem-text {
-    top: 70vh;
+  .tail-text, .stem-text {
+    width: 50vw;
   }
 }
