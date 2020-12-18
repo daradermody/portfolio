@@ -42,8 +42,10 @@
 
       function toggleBreak(e) {
         if (!e.target.classList.contains('break')) {
+          e.target.style['background-position-x'] = '0';
           replaceCssClass(e.target, 'unbreak', 'break');
         } else {
+          e.target.style['background-position-x'] = '-4371px';
           replaceCssClass(e.target, 'break', 'unbreak');
         }
       }
