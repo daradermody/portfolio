@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Loading</title>
+    <style>
+      body {
+        background: #0E0E0E;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      .ball {
+        position: absolute;
+        height: 40px;
+        animation-timing-function: ease-in-out !important;
+      }
+
+      div.ball {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      .circle {
+        animation:
+          leftAndRight 1s infinite,
+          startUp 0.25s 1,
+          upAndDown 1s 0.25s infinite;
+      }
+
+      .bounceAround {
+        animation:
+          leftAndRight 1s infinite,
+          startUp 0.25s 1,
+          bounceAround 2s 0.25s infinite;
+      }
+
+      .rotate {
+        animation: rotate 0.5s infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes leftAndRight {
+        0%, 100% { left: 0; }
+        50% { left: calc(100% - 20px); }
+      }
+      @keyframes startUp {
+        from { top: calc(50% - 10px) }
+        to { top: 0 }
+      }
+      @keyframes bounceAround {
+        0%, 50%, 75%, 100% { top: 0; transform: scale(1) }
+        25% { top: calc(100% - 20px); transform: scale(1) }
+        62.5%, 87.5% { top: calc(100% - 20px); transform: scale(2) }
+      }
+      @keyframes upAndDown {
+        0%, 100% { top: 0; }
+        50% { top: calc(100% - 20px); }
+      }
+      @keyframes rotate {
+        from { transform: rotate(0) }
+        to { transform: rotate(360deg) }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div style="background-color: white" class="ball bounceAround"></div>
+    </div>
+    <div class="wrapper">
+      <div style="background-color: white" class="ball circle"></div>
+    </div>
+    <div class="wrapper">
+      <div class="ball bounceAround">
+        <img class="rotate" src="./beach_ball.svg" width="100%"/>
+      </div>
+    </div>
+  </body>
+</html>
