@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Animation</title>
+    <style>
+      body {
+        background: #0E0E0E;
+        height: 100%;
+      }
+
+      .heart {
+        object-fit: contain;
+        background-image: url('https://raw.githubusercontent.com/daradermody/BallGobblers/master/Assets/Sprites/heart.png');
+        background-repeat: no-repeat;
+        height: 728px;
+        width: calc(4371px/6);
+      }
+
+      .break {
+        animation: playX 0.25s steps(6) 1 normal forwards;
+      }
+
+      .unbreak {
+        animation: playX 0.25s steps(6) 1 reverse forwards;
+      }
+
+      @keyframes playX {
+        from {
+          background-position-x: 0;
+        }
+        to {
+          background-position-x: -4371px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="heart" class="heart"></div>
+
+    <script>
+      document.getElementById('heart').onclick = toggleBreak;
+
+      function toggleBreak(e) {
+        if (!e.target.classList.contains('break')) {
+          replaceCssClass(e.target, 'unbreak', 'break');
+        } else {
+          replaceCssClass(e.target, 'break', 'unbreak');
+        }
+      }
+
+      function replaceCssClass(element, oldClass, newClass) {
+        element.classList.remove(oldClass);
+        setTimeout(() => element.classList.add(newClass), 0);
+      }
+    </script>
+  </body>
+</html>
